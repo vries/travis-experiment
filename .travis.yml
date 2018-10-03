@@ -6,7 +6,4 @@ python:
   - "2.7"
   - "3.6"
 
-install:
-  - pip install six pygments graphviz lxml
-
 script: python -c "from _weakref import _remove_dead_weakref"; find ~/virtualenv/python2.7/
