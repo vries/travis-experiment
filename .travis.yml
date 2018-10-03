@@ -23,4 +23,5 @@ before_install:
 install:
   - pip install six pygments graphviz lxml
 
-script: echo $CC $CXX; python --version; python -c "import weakref"
+script: echo $CC $CXX; python --version; python -c "import weakref"; python -c "import pathlib, weakref; print(pathlib.Path(weakref.__file__).resolve().parent)"
+
