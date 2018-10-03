@@ -9,4 +9,4 @@ python:
 install:
   - pip install six pygments graphviz lxml
 
-script: virtualenv --version; python -v -c "import weakref; print(weakref.__file__); find ~/virtualenv/python2.7/"
+script: python -c "from _weakref import _remove_dead_weakref"; find ~/virtualenv/python2.7/
