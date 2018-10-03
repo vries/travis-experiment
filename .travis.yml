@@ -1,9 +1,14 @@
 os:
 - linux
 
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+
 env:
- - VERSION=4.9
- - VERSION=5
+- VERSION=4.9
+- VERSION=5
 
 before_install:
 - sudo apt-get update -qq
