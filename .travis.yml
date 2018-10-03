@@ -6,4 +6,4 @@ python:
   - "2.7"
   - "3.6"
 
-script: python -c "from _weakref import _remove_dead_weakref"; find ~/virtualenv/python2.7/
+script: echo $PATH; echo $LD_LIBRARY_PATH; which python
