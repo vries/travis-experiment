@@ -1,0 +1,26 @@
+os:
+- linux
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8 gcc-4.8-plugin-dev g++-8 gcc-8-plugin-dev
+
+env:
+  - MATRIX_EVAL="CC=gcc-4.8 && CXX=g++-4.8"
+  - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+
+language: python
+python:
+  - "2.7"
+  - "3.6"
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+
+install:
+  - pip install six pygments graphviz lxml
+
+script: echo $CC $CXX; python --version
