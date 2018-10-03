@@ -1,9 +1,12 @@
 os:
 - linux
 
-language: python
-python:
-  - "2.7"
-  - "3.6"
+env:
+ - VERSION=4.9
+ - VERSION=5
+
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -qq g++-$VERSION gcc-$VERSION-plugin-dev
 
 script: echo $PATH; echo $LD_LIBRARY_PATH; which python
