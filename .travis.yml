@@ -9,5 +9,5 @@ python:
 install:
   - pip install six pygments graphviz lxml
 
-script: python --version; python -c "import weakref"; python -c "import pathlib, weakref; print(pathlib.Path(weakref.__file__).resolve().parent)"
+script: python --version; python -c "import weakref; print(weakref.__file__"
 
