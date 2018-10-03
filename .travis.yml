@@ -9,4 +9,4 @@ python:
 install:
   - pip install six pygments graphviz lxml
 
-script: strace python -c "import weakref; print(weakref.__file__)"
+script: sudo strace python -c "import weakref; print(weakref.__file__)"
